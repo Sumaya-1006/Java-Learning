@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258966010848",
+    "project_id": "java-learning-9033c",
+    "storage_bucket": "java-learning-9033c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258966010848:android:81db65de06c79e41c74985",
+        "android_client_info": {
+          "package_name": "com.example.javalearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258966010848-rj3is5vqnki2pk0ikcopc8aqidvvh74e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-362jeAhFO0BxqM0kmJZV0KY8fqjBS7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258966010848-rj3is5vqnki2pk0ikcopc8aqidvvh74e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
