@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());  
+        setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
 
         ArrayList<CategoryModel> category = new ArrayList<>();
@@ -106,12 +106,17 @@ public class MainActivity extends AppCompatActivity {
         database.collection("categories").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                  for(DocumentSnapshot snapshot : value.getDocuments()){
-                      CategoryModel model = snapshot.toObject(CategoryModel.class);
-                      model.setCategoryId(snapshot.getId());
-                      category.add(model);
-                  }
-                  adapter.notifyDataSetChanged();
+                 try{
+                     for(DocumentSnapshot snapshot : value.getDocuments()){
+                         CategoryModel model = snapshot.toObject(CategoryModel.class);
+                         model.setCategoryId(snapshot.getId());
+                         category.add(model);
+                         adapter.notifyDataSetChanged();
+                     }
+                 }catch(Exception e){
+
+                 }
+
             }
         });
 
